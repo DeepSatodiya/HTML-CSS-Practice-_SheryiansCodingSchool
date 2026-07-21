@@ -1,0 +1,430 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 1440px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111827;
+}
+
+a { text-decoration: none; color: #000; }
+
+/* ===== HERO ===== */
+.hero-wrap {
+  position: relative;
+  display: flex;
+  height: 900px;
+  width: 1440px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 900px;
+  width: 1440px;
+  padding: 27px 90px;
+}
+
+nav {
+  display: flex;
+  height: 90px;
+  width: 1440px;
+}
+
+.logo-box {
+  height: fit-content;
+  min-width: 100px;
+}
+
+.logo-box i { font-size: 25.6px; }
+.logo-box h3 { display: inline-block; font-size: 25.6px; }
+
+.nav-links {
+  position: absolute;
+  left: 576px;
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  transform: translateX(-50%);
+  gap: 90px;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.hero-content-row {
+  margin-left: -98px;
+  display: flex;
+  align-items: center;
+}
+
+.side-menu {
+  display: flex;
+  height: fit-content;
+  width: fit-content;
+  transform: rotate(-90deg);
+  justify-content: center;
+  gap: 48px;
+}
+
+.side-menu-bar {
+  height: 40px;
+  width: 80px;
+  background-color: rgba(63, 63, 63, 0.765);
+}
+
+.hero-text {
+  margin-left: 48px;
+  margin-top: 32px;
+  width: 720px;
+}
+
+.hero-text h1 {
+  margin-bottom: 32px;
+  width: 648px;
+  font-size: 80px;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.hero-text p {
+  margin-bottom: 16px;
+  width: 504px;
+  line-height: 24px;
+}
+
+.hero-text button {
+  cursor: pointer;
+  background-color: #000;
+  border: none;
+  padding: 11.2px 32px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.hero-footer-row {
+  position: absolute;
+  bottom: 45px;
+  left: 216px;
+  display: flex;
+  height: 16px;
+  width: 1440px;
+}
+
+.hero-social { width: 72px; }
+.hero-social i { display: block; }
+
+.hero-progress {
+  margin-left: 112px;
+  display: flex;
+  height: 16px;
+  width: 1152px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 900;
+}
+
+.progress-track {
+  height: 8px;
+  width: 691px;
+  background-color: rgba(63, 63, 63, 0.765);
+}
+
+.progress-fill {
+  height: 100%;
+  width: 138px;
+  background-color: #000;
+}
+
+.hero-image-col {
+  height: 900px;
+  width: 1440px;
+}
+
+.hero-image {
+  position: relative;
+  margin-left: auto;
+  display: flex;
+  height: 810px;
+  width: 864px;
+  justify-content: flex-end;
+  align-self: flex-end;
+  background-color: #f3f3f3;
+  background-image: url('https://c0.wallpaperflare.com/preview/56/46/456/cactus-flower-pot-houseplant-plant.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-arrow {
+  position: absolute;
+  top: 405px;
+  right: 72px;
+  font-size: 32px;
+}
+
+/* ===== EUROPE SECTION ===== */
+.section-europe {
+  position: relative;
+  display: flex;
+  height: 900px;
+  width: 1440px;
+  align-items: center;
+}
+
+.europe-image {
+  height: 720px;
+  width: 1440px;
+  background-image: url('https://floweraura-blog-img.s3.ap-south-1.amazonaws.com/plants-blog/1-D.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.europe-text {
+  margin-left: -160px;
+  height: 450px;
+  width: 1440px;
+  background-color: #fff;
+  padding: 90px;
+}
+
+.europe-text h2 {
+  margin-bottom: 16px;
+  width: 432px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.europe-text p {
+  margin-bottom: 32px;
+  width: 576px;
+}
+
+.europe-text a {
+  font-weight: 800;
+}
+
+.europe-arrow {
+  position: absolute;
+  top: 450px;
+  right: 72px;
+  font-size: 32px;
+}
+
+/* ===== CONTACT SECTION ===== */
+.section-contact {
+  position: relative;
+  margin-bottom: 90px;
+  display: flex;
+  height: 900px;
+  width: 1440px;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-text {
+  height: 900px;
+  width: 1440px;
+  padding: 90px;
+  padding-right: 540px;
+}
+
+.contact-label {
+  margin-bottom: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19.2px;
+  line-height: 32px;
+}
+
+.contact-text h2 {
+  margin-bottom: 16px;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.contact-strong {
+  margin-bottom: 0;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 800;
+}
+
+.contact-body {
+  margin-bottom: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 19.2px;
+  line-height: 32px;
+}
+
+.messages-btn {
+  position: absolute;
+  bottom: 90px;
+  left: 90px;
+  background-color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 27px 45px;
+  font-size: 17.6px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: #fff;
+}
+
+.contact-image {
+  height: 900px;
+  width: 1440px;
+  background-image: url('https://plus.unsplash.com/premium_photo-1681487798758-04787a334670?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ===== KITCHEN SECTION ===== */
+.section-kitchen {
+  position: relative;
+  height: 720px;
+  width: 1440px;
+  background-image: url('https://i1.pickpik.com/photos/339/511/699/flower-bloom-pink-stem-preview.jpg');
+  background-size: contain;
+  background-position: 60%;
+  background-repeat: no-repeat;
+}
+
+.kitchen-box {
+  margin-left: 180px;
+  height: fit-content;
+  width: 432px;
+  background-color: #fff;
+  padding: 90px;
+}
+
+.kitchen-box h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.kitchen-box p {
+  margin-bottom: 24px;
+}
+
+.kitchen-box a {
+  font-weight: 800;
+}
+
+.kitchen-next {
+  position: absolute;
+  right: 216px;
+  bottom: -9px;
+}
+
+.kitchen-next button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 27px 45px;
+  font-weight: 800;
+  color: #000;
+}
+
+/* ===== HELLO SECTION ===== */
+.section-hello {
+  display: flex;
+  height: 900px;
+  width: 1440px;
+  gap: 48px;
+  padding: 90px;
+}
+
+.hello-image {
+  height: 720px;
+  width: 388px;
+  background-image: url('https://c1.wallpaperflare.com/preview/599/555/601/plant-glass-bottle-hand-holding.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hello-text {
+  height: 720px;
+  width: 388px;
+  padding: 0 9px;
+}
+
+.hello-text h1 {
+  margin-bottom: 32px;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.hello-text p {
+  margin-top: 17.6px;
+}
+
+.hello-text-2 .first-para {
+  margin-top: 80px;
+  margin-bottom: 16px;
+}
+
+.hello-text-2 p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  height: 585px;
+  width: 1440px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-col {
+  height: 585px;
+  width: 480px;
+}
+
+.footer-col-main {
+  padding: 90px;
+}
+
+.footer-col-main h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.subscribe-row {
+  margin-top: 18px;
+  margin-bottom: 270px;
+  display: flex;
+}
+
+.subscribe-row input {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  padding: 4.5px 28.8px;
+}
+
+.subscribe-row button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  padding: 4.5px 28.8px;
+}
+
+.footer-col-links {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding-top: 90px;
+}
+
+.footer-col-links a { color: #fff; }
