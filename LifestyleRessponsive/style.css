@@ -1,0 +1,348 @@
+/* ---------- Reset & Base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #18181b; /* zinc-900 */
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 9999px;
+  background: linear-gradient(to bottom right, #38bdf8, #3b82f6);
+  flex-shrink: 0;
+}
+
+.main-nav {
+  display: none;
+  align-items: center;
+  gap: 24px;
+  font-size: 11px;
+  color: #a1a1aa; /* zinc-400 */
+}
+
+.main-nav a {
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.main-nav a:hover {
+  color: #18181b;
+}
+
+.main-nav a.active {
+  color: #18181b;
+  font-weight: 600;
+}
+
+.avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background-color: #d4d4d8; /* zinc-300 */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Main / Heading ---------- */
+.site-main {
+  padding: 0 0 48px 0;
+}
+
+.page-heading {
+  max-width: 980px;
+  padding-top: 32px;
+}
+
+.page-heading h1 {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.page-heading p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #52525b; /* zinc-600 */
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* ---------- Grid ---------- */
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* ---------- Card ---------- */
+.card {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 360px;
+}
+
+.card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0) 50%, rgba(0,0,0,0.2));
+}
+
+.card-overlay-dark {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0) 50%, rgba(0,0,0,0.2));
+}
+
+.card-text {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  color: #ffffff;
+  max-width: 220px;
+}
+
+.card-title-lg + .card-text,
+.card-wide .card-text {
+  max-width: 340px;
+}
+
+.card-category {
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.card-category-upper {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.card-title-lg {
+  font-size: 20px;
+}
+
+.card-badge-wrap {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  background-color: rgba(255,255,255,0.95);
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+
+.badge-red    { color: #991b1b; }
+.badge-green  { color: #065f46; }
+.badge-sky    { color: #075985; }
+.badge-amber  { color: #92400e; }
+.badge-blue   { color: #1e40af; }
+
+/* ---------- Card sizing (mobile default: all full width) ---------- */
+.card-wide,
+.card-narrow {
+  width: 100%;
+}
+
+/* ==========================================================
+   TABLET (>= 768px)
+   ========================================================== */
+@media (min-width: 768px) {
+  .main-nav {
+    display: flex;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-wide {
+    grid-column: span 2;
+  }
+
+  .card-narrow {
+    grid-column: span 1;
+  }
+
+  .page-heading h1 {
+    font-size: 36px;
+  }
+}
+
+/* ==========================================================
+   DESKTOP (>= 1024px)
+   ========================================================== */
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 40px;
+  }
+
+  .page-heading {
+    padding-top: 48px;
+  }
+
+  .page-heading h1 {
+    font-size: 40px;
+  }
+
+  .page-heading p {
+    font-size: 16px;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .card-wide {
+    grid-column: span 6;
+  }
+
+  .card-narrow {
+    grid-column: span 3;
+  }
+
+  .card-title-lg {
+    font-size: 24px;
+  }
+}
+
+/* ==========================================================
+   LARGE DESKTOP (>= 1536px)
+   ========================================================== */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1440px;
+  }
+
+  .card {
+    height: 400px;
+  }
+}
+
+/* ==========================================================
+   4K (>= 2560px)
+   ========================================================== */
+@media (min-width: 2560px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    max-width: 1920px;
+    padding: 0 64px;
+  }
+
+  .logo-dot {
+    width: 36px;
+    height: 36px;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+  }
+
+  .main-nav {
+    font-size: 14px;
+    gap: 32px;
+  }
+
+  .page-heading h1 {
+    font-size: 56px;
+  }
+
+  .page-heading p {
+    font-size: 20px;
+    max-width: 720px;
+  }
+
+  .card-grid {
+    gap: 32px;
+    margin-top: 56px;
+  }
+
+  .card {
+    height: 480px;
+    border-radius: 24px;
+  }
+
+  .card-category {
+    font-size: 16px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-title-lg {
+    font-size: 32px;
+  }
+
+  .card-badge {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
